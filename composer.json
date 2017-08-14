@@ -2,6 +2,15 @@
     "name": "guillermobt/laravel-fullcalendar",
     "description": "Laravel helper for FullCalendar.io. This fork (guillermobt) fixes schedule time in agenda views",
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/maddhatter/laravel-fullcalendar"
+        }
+    ],
+    "require": {
+        "maddhatter/laravel-fullcalendar": "dev-master"
+    }
     "authors": [
         {
             "name": "Shawn Tunney",
