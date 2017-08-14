@@ -1,6 +1,6 @@
 {
-    "name": "maddhatter/laravel-fullcalendar",
-    "description": "Laravel helper for FullCalendar.io",
+    "name": "guillermobt/laravel-fullcalendar",
+    "description": "Laravel helper for FullCalendar.io. This fork (guillermobt) fixes schedule time in agenda views",
     "license": "MIT",
     "authors": [
         {
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-0": {
-            "MaddHatter\\LaravelFullcalendar": "src/"
+            "guillermobt\\LaravelFullcalendar": "src/"
         }
     },
     "minimum-stability": "stable"
