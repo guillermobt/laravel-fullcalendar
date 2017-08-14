@@ -10,7 +10,7 @@
     ],
     "require": {
         "maddhatter/laravel-fullcalendar": "dev-master"
-    }
+    },
     "authors": [
         {
             "name": "Shawn Tunney",
