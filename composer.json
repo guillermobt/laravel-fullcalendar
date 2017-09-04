@@ -5,16 +5,20 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/maddhatter/laravel-fullcalendar"
+            "url": "https://github.com/guillermobt/laravel-fullcalendar"
         }
     ],
     "require": {
-        "maddhatter/laravel-fullcalendar": "dev-master"
+        "guillermobt/laravel-fullcalendar": "dev-master"
     },
     "authors": [
         {
             "name": "Shawn Tunney",
             "email": "shawn.tunney@gmail.com"
+        },
+        {
+            "name": "Guillermo BT",
+            "email": "guillermobt@gmail.com"
         }
     ],
     "require": {
