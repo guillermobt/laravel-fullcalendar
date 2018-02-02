@@ -1,7 +1,7 @@
 
 # About this fork 
 
-This fork fixes an issue with the Agenda views in which all the events where showing up scheduled at 00:00 hours
+This fork fixes an issue with the Agenda views in which all the events were showing up scheduled at 00:00 hours.
 
 
 # Laravel 5 Full Calendar Helper
