@@ -2,11 +2,12 @@
 # About this fork 
 
 This fork fixes an issue with the Agenda views in which all the events were showing up scheduled at 00:00 hours.
-
+Credits for this plugin belong to MaddHatter (https://github.com/maddhatter/laravel-fullcalendar). 
+I decided to fork after timing-out my pull-request to maddhatter :) 
 
 # Laravel 5 Full Calendar Helper
 
-[![Latest Stable Version](https://poser.pugx.org/maddhatter/laravel-fullcalendar/v/stable)](https://packagist.org/packages/maddhatter/laravel-fullcalendar) [![Total Downloads](https://poser.pugx.org/maddhatter/laravel-fullcalendar/downloads)](https://packagist.org/packages/maddhatter/laravel-fullcalendar) [![Latest Unstable Version](https://poser.pugx.org/maddhatter/laravel-fullcalendar/v/unstable)](https://packagist.org/packages/maddhatter/laravel-fullcalendar) [![License](https://poser.pugx.org/maddhatter/laravel-fullcalendar/license)](https://packagist.org/packages/maddhatter/laravel-fullcalendar)
+[![Latest Stable Version](https://poser.pugx.org/guillermobt/laravel-fullcalendar/v/stable)](https://packagist.org/packages/guillermobt/laravel-fullcalendar) [![Total Downloads](https://poser.pugx.org/guillermobt/laravel-fullcalendar/downloads)](https://packagist.org/packages/guillermobt/laravel-fullcalendar) [![Latest Unstable Version](https://poser.pugx.org/guillermobt/laravel-fullcalendar/v/unstable)](https://packagist.org/packages/guillermobt/laravel-fullcalendar) [![License](https://poser.pugx.org/guillermobt/laravel-fullcalendar/license)](https://packagist.org/packages/guillermobt/laravel-fullcalendar)
 
 ***For Laravel 4.2: use the [laravel-4 branch](https://github.com/maddhatter/laravel-fullcalendar/tree/laravel-4)***
 
@@ -15,26 +16,26 @@ This is a simple helper package to make generating [http://fullcalendar.io](http
 ## Installing
 Require the package with composer using the following command:
 
-    composer require maddhatter/laravel-fullcalendar
+    composer require guillermobt/laravel-fullcalendar
 
 Or add the following to your composer.json's require section and `composer update`
 
 ```json
 "require": {
-	"maddhatter/laravel-fullcalendar": "~1.0"
+	"guillermobt/laravel-fullcalendar": "dev-master"
 }
 ```
 
 Then register the service provider in your `app.php` config file:
 
 ```php
-MaddHatter\LaravelFullcalendar\ServiceProvider::class,
+guillermobt\LaravelFullcalendar\ServiceProvider::class,
 ```
 
 And optionally create an alias:
 
 ```php
-'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
+'Calendar' => guillermobt\LaravelFullcalendar\Facades\Calendar::class,
 
 ```
 
@@ -62,10 +63,10 @@ $event = \Calendar::event(
 ```
 #### Implementing `Event` Interface
 
-Alternatively, you can use an existing class and have it implement `MaddHatter\LaravelFullcalendar\Event`. An example of an Eloquent model that implements the `Event` interface:
+Alternatively, you can use an existing class and have it implement `guillermobt\LaravelFullcalendar\Event`. An example of an Eloquent model that implements the `Event` interface:
   
 ```php
-class EventModel extends Eloquent implements \MaddHatter\LaravelFullcalendar\Event
+class EventModel extends Eloquent implements \guillermobt\LaravelFullcalendar\Event
 {
 
     protected $dates = ['start', 'end'];
@@ -123,10 +124,10 @@ class EventModel extends Eloquent implements \MaddHatter\LaravelFullcalendar\Eve
 
 #### `IdentifiableEvent` Interface
 
-If you wish for your existing class to have event IDs, implement `\MaddHatter\LaravelFullcalendar\IdentifiableEvent` instead. This interface extends `\MaddHatter\LaravelFullcalendar\Event` to add a `getId()` method:
+If you wish for your existing class to have event IDs, implement `\guillermobt\LaravelFullcalendar\IdentifiableEvent` instead. This interface extends `\guillermobt\LaravelFullcalendar\Event` to add a `getId()` method:
 
 ```php
-class EventModel extends Eloquent implements \MaddHatter\LaravelFullcalendar\IdentifiableEvent
+class EventModel extends Eloquent implements \guillermobt\LaravelFullcalendar\IdentifiableEvent
 {
 
 	// Implement all Event methods ...
@@ -169,7 +170,7 @@ $event = \Calendar::event(
 
 ```php
 <?php
-class CalendarEvent extends \Illuminate\Database\Eloquent\Model implements \MaddHatter\LaravelFullcalendar\Event
+class CalendarEvent extends \Illuminate\Database\Eloquent\Model implements \guillermobt\LaravelFullcalendar\Event
 {
 	//...
 
@@ -215,7 +216,7 @@ $events[] = \Calendar::event(
 	'stringEventId' //optionally, you can specify an event ID
 );
 
-$eloquentEvent = EventModel::first(); //EventModel implements MaddHatter\LaravelFullcalendar\Event
+$eloquentEvent = EventModel::first(); //EventModel implements guillermobt\LaravelFullcalendar\Event
 
 $calendar = \Calendar::addEvents($events) //add an array with addEvents
     ->addEvent($eloquentEvent, [ //set custom color fo this event
