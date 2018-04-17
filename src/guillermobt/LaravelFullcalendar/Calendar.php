@@ -83,7 +83,7 @@ class Calendar
      */
     public function calendar()
     {
-        return '<div id="calendar-' . $this->getId() . '"></div>';
+        return '<div class="fullKal" id="calendar-' . $this->getId() . '"></div>';
     }
 
     /**
