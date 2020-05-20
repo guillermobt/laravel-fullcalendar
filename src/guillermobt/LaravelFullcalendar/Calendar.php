@@ -269,5 +269,10 @@ class Calendar
 
         return str_replace($search, $replace, $json);
     }
+    
+    public function getEventCollection()
+    {
+         return $this->eventCollection;
+    }
 
 }
